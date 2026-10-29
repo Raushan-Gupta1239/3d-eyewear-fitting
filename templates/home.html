@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Welcome!</h2>
+        <p>Logged in as: <strong>{{ session.get('username') }}</strong></p>
+        <p style="margin-top: 20px;">
+            <a href="{{ url_for('logout') }}" style="display: inline-block; padding: 10px 20px; background: #dc2626; color: white; border-radius: 5px; text-decoration: none;">Logout</a>
+        </p>
+    </div>
+
+</body>
+</html>
